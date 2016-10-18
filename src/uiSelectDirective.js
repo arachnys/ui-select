@@ -56,7 +56,8 @@ uis.directive('uiSelect',
 
         if(attrs.tabindex){
           attrs.$observe('tabindex', function(value) {
-            $select.focusInput.attr("tabindex", value);
+            $select.focusInput.attr("tabindex", value * 2);
+            $select.searchInput.attr("tabindex", value * 2 + 1);            
             element.removeAttr("tabindex");
           });
         }

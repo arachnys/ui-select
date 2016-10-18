@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.12.1 - 2015-08-17T15:16:19.798Z
+ * Version: 0.12.1 - 2016-10-18T15:49:01.338Z
  * License: MIT
  */
 
@@ -814,7 +814,8 @@ uis.directive('uiSelect',
 
         if(attrs.tabindex){
           attrs.$observe('tabindex', function(value) {
-            $select.focusInput.attr("tabindex", value);
+            $select.focusInput.attr("tabindex", value * 2);
+            $select.searchInput.attr("tabindex", value * 2 + 1);            
             element.removeAttr("tabindex");
           });
         }
